@@ -5,7 +5,7 @@
         "https://cdn.jsdelivr.net/npm/@mantine/core@7.17.2/styles.layer.css"
       ],
       "scripts": [
-        "https://cdn.jsdelivr.net/npm/@wf-embedded/cta@0.0.14/dist/wf-embedded-cta.umd.js"
+        "https://cdn.jsdelivr.net/npm/@wf-embedded/cta@0.0.15/dist/wf-embedded-cta.umd.js"
       ]
     }
   },
@@ -15,7 +15,7 @@
         "https://cdn.jsdelivr.net/npm/@mantine/core@7.17.2/styles.layer.css"
       ],
       "scripts": [
-        "https://cdn.jsdelivr.net/npm/@wf-embedded/consent@0.0.14/dist/wf-embedded-consent.umd.js"
+        "https://cdn.jsdelivr.net/npm/@wf-embedded/consent@0.0.15/dist/wf-embedded-consent.umd.js"
       ]
     }
   }
