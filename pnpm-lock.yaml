@@ -7,10 +7,10 @@ settings:
 dependencies:
   '@astrojs/netlify':
     specifier: ^6.2.3
-    version: 6.2.5(@types/node@20.17.29)(astro@5.5.6)
+    version: 6.2.5(@types/node@20.17.29)(astro@5.5.6)(tsx@4.19.3)
   '@astrojs/react':
     specifier: ^4.2.1
-    version: 4.2.3(@types/node@20.17.29)(@types/react-dom@18.3.5)(@types/react@18.3.20)(react-dom@18.3.1)(react@18.3.1)
+    version: 4.2.3(@types/node@20.17.29)(@types/react-dom@18.3.5)(@types/react@18.3.20)(react-dom@18.3.1)(react@18.3.1)(tsx@4.19.3)
   '@fontsource-variable/inter':
     specifier: ^5.2.5
     version: 5.2.5
@@ -31,7 +31,7 @@ dependencies:
     version: 18.3.5(@types/react@18.3.20)
   astro:
     specifier: ^5.5.3
-    version: 5.5.6(@netlify/blobs@8.1.2)(@types/node@20.17.29)(typescript@5.8.2)
+    version: 5.5.6(@netlify/blobs@8.1.2)(@types/node@20.17.29)(tsx@4.19.3)(typescript@5.8.2)
   blobshape:
     specifier: ^1.0.0
     version: 1.0.0
@@ -64,6 +64,9 @@ devDependencies:
   '@types/node':
     specifier: ^20.12.7
     version: 20.17.29
+  tsx:
+    specifier: ^4.19.3
+    version: 4.19.3
 
 packages:
 
@@ -111,7 +114,7 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/netlify@6.2.5(@types/node@20.17.29)(astro@5.5.6):
+  /@astrojs/netlify@6.2.5(@types/node@20.17.29)(astro@5.5.6)(tsx@4.19.3):
     resolution: {integrity: sha512-mafxa/sSJ45hnF4hROfFIrJzrhxNGceehnRKVO7i9F/37hqZWsQbmXuC7UZVOMQHt5o76Ia+W5HHlum0d0f/kA==}
     peerDependencies:
       astro: ^5.3.0
@@ -121,10 +124,10 @@ packages:
       '@netlify/blobs': 8.1.2
       '@netlify/functions': 3.0.4
       '@vercel/nft': 0.29.2
-      astro: 5.5.6(@netlify/blobs@8.1.2)(@types/node@20.17.29)(typescript@5.8.2)
+      astro: 5.5.6(@netlify/blobs@8.1.2)(@types/node@20.17.29)(tsx@4.19.3)(typescript@5.8.2)
       esbuild: 0.25.2
       tinyglobby: 0.2.12
-      vite: 6.2.4(@types/node@20.17.29)
+      vite: 6.2.4(@types/node@20.17.29)(tsx@4.19.3)
     transitivePeerDependencies:
       - '@types/node'
       - encoding
@@ -149,7 +152,7 @@ packages:
       prismjs: 1.30.0
     dev: false
 
-  /@astrojs/react@4.2.3(@types/node@20.17.29)(@types/react-dom@18.3.5)(@types/react@18.3.20)(react-dom@18.3.1)(react@18.3.1):
+  /@astrojs/react@4.2.3(@types/node@20.17.29)(@types/react-dom@18.3.5)(@types/react@18.3.20)(react-dom@18.3.1)(react@18.3.1)(tsx@4.19.3):
     resolution: {integrity: sha512-icL1hCnW1v+w+NCAz8REfsh9R1aGMW75fYBoeLjyhrVDxXQHiFbTfyBIHkgH79qqID7SM81+hPxHlqcgCuBP8w==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
@@ -164,7 +167,7 @@ packages:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       ultrahtml: 1.5.3
-      vite: 6.2.4(@types/node@20.17.29)
+      vite: 6.2.4(@types/node@20.17.29)(tsx@4.19.3)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -384,7 +387,6 @@ packages:
     cpu: [ppc64]
     os: [aix]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/android-arm64@0.25.2:
@@ -393,7 +395,6 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/android-arm@0.25.2:
@@ -402,7 +403,6 @@ packages:
     cpu: [arm]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/android-x64@0.25.2:
@@ -411,7 +411,6 @@ packages:
     cpu: [x64]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/darwin-arm64@0.25.2:
@@ -420,7 +419,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/darwin-x64@0.25.2:
@@ -429,7 +427,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/freebsd-arm64@0.25.2:
@@ -438,7 +435,6 @@ packages:
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/freebsd-x64@0.25.2:
@@ -447,7 +443,6 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-arm64@0.25.2:
@@ -456,7 +451,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-arm@0.25.2:
@@ -465,7 +459,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-ia32@0.25.2:
@@ -474,7 +467,6 @@ packages:
     cpu: [ia32]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-loong64@0.25.2:
@@ -483,7 +475,6 @@ packages:
     cpu: [loong64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-mips64el@0.25.2:
@@ -492,7 +483,6 @@ packages:
     cpu: [mips64el]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-ppc64@0.25.2:
@@ -501,7 +491,6 @@ packages:
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-riscv64@0.25.2:
@@ -510,7 +499,6 @@ packages:
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-s390x@0.25.2:
@@ -519,7 +507,6 @@ packages:
     cpu: [s390x]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-x64@0.25.2:
@@ -528,7 +515,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/netbsd-arm64@0.25.2:
@@ -537,7 +523,6 @@ packages:
     cpu: [arm64]
     os: [netbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/netbsd-x64@0.25.2:
@@ -546,7 +531,6 @@ packages:
     cpu: [x64]
     os: [netbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/openbsd-arm64@0.25.2:
@@ -555,7 +539,6 @@ packages:
     cpu: [arm64]
     os: [openbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/openbsd-x64@0.25.2:
@@ -564,7 +547,6 @@ packages:
     cpu: [x64]
     os: [openbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/sunos-x64@0.25.2:
@@ -573,7 +555,6 @@ packages:
     cpu: [x64]
     os: [sunos]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/win32-arm64@0.25.2:
@@ -582,7 +563,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/win32-ia32@0.25.2:
@@ -591,7 +571,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/win32-x64@0.25.2:
@@ -600,7 +579,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@fontsource-variable/inter@5.2.5:
@@ -1255,7 +1233,7 @@ packages:
       '@tailwindcss/oxide': 4.0.17
       lightningcss: 1.29.2
       tailwindcss: 4.0.17
-      vite: 6.2.4(@types/node@20.17.29)
+      vite: 6.2.4(@types/node@20.17.29)(tsx@4.19.3)
     dev: false
 
   /@types/babel__core@7.20.5:
@@ -1389,7 +1367,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.10)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 6.2.4(@types/node@20.17.29)
+      vite: 6.2.4(@types/node@20.17.29)(tsx@4.19.3)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1467,7 +1445,7 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: false
 
-  /astro@5.5.6(@netlify/blobs@8.1.2)(@types/node@20.17.29)(typescript@5.8.2):
+  /astro@5.5.6(@netlify/blobs@8.1.2)(@types/node@20.17.29)(tsx@4.19.3)(typescript@5.8.2):
     resolution: {integrity: sha512-SjU6zAlRe/gQrZ558Qhm211Yl8XOZBfjMpZig3XtQpG6zlyHJkElbWQIWXAVPzMg17cFVdv/qZPVHfcP2YOGGw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
@@ -1521,7 +1499,7 @@ packages:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0(@netlify/blobs@8.1.2)
       vfile: 6.0.3
-      vite: 6.2.4(@types/node@20.17.29)
+      vite: 6.2.4(@types/node@20.17.29)(tsx@4.19.3)
       vitefu: 1.0.6(vite@6.2.4)
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -1906,7 +1884,6 @@ packages:
       '@esbuild/win32-arm64': 0.25.2
       '@esbuild/win32-ia32': 0.25.2
       '@esbuild/win32-x64': 0.25.2
-    dev: false
 
   /escalade@3.2.0:
     resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
@@ -1969,7 +1946,6 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /gensync@1.0.0-beta.2:
@@ -1981,6 +1957,11 @@ packages:
     resolution: {integrity: sha512-vpeMIQKxczTD/0s2CdEWHcb0eeJe6TFjxb+J5xgX7hScxqrGuyjmv4c1D4A/gelKfyox0gJJwIHF+fLjeaM8kQ==}
     engines: {node: '>=18'}
     dev: false
+
+  /get-tsconfig@4.10.0:
+    resolution: {integrity: sha512-kGzZ3LWWQcGIAmg6iWvXn0ei6WDtV26wzHRMwDSzmAbcXrTEXxHy6IehI6/4eT6VRKyMP1eF1VqwrVUmE/LR7A==}
+    dependencies:
+      resolve-pkg-maps: 1.0.0
 
   /github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
@@ -3154,6 +3135,9 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /resolve-pkg-maps@1.0.0:
+    resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
+
   /retext-latin@4.0.0:
     resolution: {integrity: sha512-hv9woG7Fy0M9IlRQloq/N6atV82NxLGveq+3H2WOi79dtIYWN8OaxogDm77f8YnVXJL2VD3bbqowu5E3EMhBYA==}
     dependencies:
@@ -3433,6 +3417,16 @@ packages:
     dev: false
     optional: true
 
+  /tsx@4.19.3:
+    resolution: {integrity: sha512-4H8vUNGNjQ4V2EOoGw005+c+dGuPSnhpPBPHBtsZdGZBk/iJb4kguGlPWaZTZ3q5nMtFOEsY0nRDlh9PJyd6SQ==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    dependencies:
+      esbuild: 0.25.2
+      get-tsconfig: 4.10.0
+    optionalDependencies:
+      fsevents: 2.3.3
+
   /type-fest@4.39.0:
     resolution: {integrity: sha512-w2IGJU1tIgcrepg9ZJ82d8UmItNQtOFJG0HCUE3SzMokKkTsruVDALl2fAdiEzJlfduoU+VyXJWIIUZ+6jV+nw==}
     engines: {node: '>=16'}
@@ -3642,7 +3636,7 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite@6.2.4(@types/node@20.17.29):
+  /vite@6.2.4(@types/node@20.17.29)(tsx@4.19.3):
     resolution: {integrity: sha512-veHMSew8CcRzhL5o8ONjy8gkfmFJAd5Ac16oxBUjlwgX3Gq2Wqr+qNC3TjPIpy7TPV/KporLga5GT9HqdrCizw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -3686,6 +3680,7 @@ packages:
       esbuild: 0.25.2
       postcss: 8.5.3
       rollup: 4.38.0
+      tsx: 4.19.3
     optionalDependencies:
       fsevents: 2.3.3
     dev: false
@@ -3698,7 +3693,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 6.2.4(@types/node@20.17.29)
+      vite: 6.2.4(@types/node@20.17.29)(tsx@4.19.3)
     dev: false
 
   /web-namespaces@2.0.1:
