@@ -1,0 +1,56 @@
+---
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class:list={['resize-handle absolute right-0 top-0 bottom-0 w-1 cursor-ew-resize hover:bg-white/10 transition-colors z-50 bg-white/5', className]}>
+    <div class="absolute top-1/2 -translate-y-1/2 right-0 w-1 h-8 bg-white/20 rounded-full"></div>
+</div>
+
+<script>
+    const handle = document.querySelector('.resize-handle');
+    const nav = document.querySelector('nav');
+    const minWidth = 200;
+    const maxWidth = 500;
+    const storageKey = 'sidenav-width';
+
+    // Load saved width from localStorage
+    const savedWidth = localStorage.getItem(storageKey);
+    if (savedWidth) {
+        nav.style.width = `${savedWidth}px`;
+    }
+
+    let isResizing = false;
+    let startX = 0;
+    let startWidth = 0;
+
+    handle.addEventListener('mousedown', (e: MouseEvent) => {
+        isResizing = true;
+        startX = e.clientX;
+        startWidth = nav.offsetWidth;
+        document.body.style.cursor = 'ew-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    document.addEventListener('mousemove', (e: MouseEvent) => {
+        if (!isResizing) return;
+
+        const width = startWidth + (e.clientX - startX);
+        const clampedWidth = Math.min(Math.max(width, minWidth), maxWidth);
+        nav.style.width = `${clampedWidth}px`;
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (!isResizing) return;
+
+        isResizing = false;
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+
+        // Save width to localStorage
+        localStorage.setItem(storageKey, nav.offsetWidth.toString());
+    });
+</script>

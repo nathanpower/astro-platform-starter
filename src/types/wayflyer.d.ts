@@ -7,7 +7,10 @@ export interface SDKConfig {
 declare global {
     interface Window {
         WayflyerEmbedSdk: {
-            init: (config: SDKConfig) => void;
+            renderCallToAction: () => void;
+        };
+        WayflyerEmbedConfig: {
+            apiKey: string;
         };
     }
 }

@@ -1,5 +1,6 @@
 ---
 import Logo from './Logo.astro';
+import ResizeHandle from './ResizeHandle.astro';
 
 const navItems = [
     { linkText: 'Home', href: '/' },
@@ -10,7 +11,7 @@ const navItems = [
 ];
 ---
 
-<nav class="fixed top-0 left-0 w-64 h-screen pt-6 pb-6 border-r border-white/10 flex flex-col">
+<nav class="fixed top-0 left-0 w-64 h-screen pt-6 pb-6 border-r border-white/10 flex flex-col bg-complementary">
     <a href="/" class="block mb-8">
         <Logo />
     </a>
@@ -27,12 +28,6 @@ const navItems = [
             </ul>
         )
     }
-    <div id="wf-offer-cta" class="w-full h-[405px] flex"></div>
+    <div id="wf-embedded-cta-container"></div>
+    <ResizeHandle />
 </nav>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        window.WayflyerEmbedSdk.init({
-            apiKey: 'your_api_key_here'
-        });
-    });
-</script>
